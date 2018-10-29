@@ -38,7 +38,7 @@
         </javaClientGenerator>
 
         <!-- 数据表进行生成操作 schema:相当于库名; tableName:表名; domainObjectName:对应的DO -->
-        <table schema="jfianl_demo" tableName="heroes" domainObjectName="Heroes">
+        <table schema="jfianl_demo" tableName="role" domainObjectName="Role">
         </table>
 
         <!--<table schema="jfianl_demo" tableName="user" domainObjectName="User"-->

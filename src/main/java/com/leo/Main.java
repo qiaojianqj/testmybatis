@@ -1,9 +1,5 @@
 package com.leo;
 
-import com.leo.dao.RoleMapper;
-import com.leo.dao.UserMapper;
-import com.leo.domain.Role;
-import com.leo.domain.RoleExample;
 import com.leo.domain.User;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -14,6 +10,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import javax.annotation.PostConstruct;
 import java.io.InputStream;
+import java.util.List;
 
 @SpringBootApplication
 //Auto Gen Mapper Dependency Inject
@@ -30,9 +27,8 @@ public class Main {
         InputStream is = Main.class.getClassLoader ().getResourceAsStream ( resource );
         SqlSessionFactory sessionFactory = new SqlSessionFactoryBuilder ().build(is);
         SqlSession session = sessionFactory.openSession ();
-        UserMapper userMapper = session.getMapper ( UserMapper.class );
-        User user = userMapper.getUser ( 4 );
-        System.out.println ( "id: " + user.getId () + "; name: " + user.getName ());
+        List<User> users = session.selectList ( "getUser" );
+        System.out.println ( users.get ( 0 ).getId () + ";" + users.get ( 0 ).getName () );
         session.close ();
     }
 }

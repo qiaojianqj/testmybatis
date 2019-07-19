@@ -1493,6 +1493,276 @@ public class AccountExample {
             addCriterion("DEVICETYPE not between", value1, value2, "devicetype");
             return (Criteria) this;
         }
+
+        public Criteria andRoletimeIsNull() {
+            addCriterion("roletime is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andRoletimeIsNotNull() {
+            addCriterion("roletime is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andRoletimeEqualTo(Long value) {
+            addCriterion("roletime =", value, "roletime");
+            return (Criteria) this;
+        }
+
+        public Criteria andRoletimeNotEqualTo(Long value) {
+            addCriterion("roletime <>", value, "roletime");
+            return (Criteria) this;
+        }
+
+        public Criteria andRoletimeGreaterThan(Long value) {
+            addCriterion("roletime >", value, "roletime");
+            return (Criteria) this;
+        }
+
+        public Criteria andRoletimeGreaterThanOrEqualTo(Long value) {
+            addCriterion("roletime >=", value, "roletime");
+            return (Criteria) this;
+        }
+
+        public Criteria andRoletimeLessThan(Long value) {
+            addCriterion("roletime <", value, "roletime");
+            return (Criteria) this;
+        }
+
+        public Criteria andRoletimeLessThanOrEqualTo(Long value) {
+            addCriterion("roletime <=", value, "roletime");
+            return (Criteria) this;
+        }
+
+        public Criteria andRoletimeIn(List<Long> values) {
+            addCriterion("roletime in", values, "roletime");
+            return (Criteria) this;
+        }
+
+        public Criteria andRoletimeNotIn(List<Long> values) {
+            addCriterion("roletime not in", values, "roletime");
+            return (Criteria) this;
+        }
+
+        public Criteria andRoletimeBetween(Long value1, Long value2) {
+            addCriterion("roletime between", value1, value2, "roletime");
+            return (Criteria) this;
+        }
+
+        public Criteria andRoletimeNotBetween(Long value1, Long value2) {
+            addCriterion("roletime not between", value1, value2, "roletime");
+            return (Criteria) this;
+        }
+
+        public Criteria andLogindevinfoIsNull() {
+            addCriterion("logindevinfo is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andLogindevinfoIsNotNull() {
+            addCriterion("logindevinfo is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andLogindevinfoEqualTo(String value) {
+            addCriterion("logindevinfo =", value, "logindevinfo");
+            return (Criteria) this;
+        }
+
+        public Criteria andLogindevinfoNotEqualTo(String value) {
+            addCriterion("logindevinfo <>", value, "logindevinfo");
+            return (Criteria) this;
+        }
+
+        public Criteria andLogindevinfoGreaterThan(String value) {
+            addCriterion("logindevinfo >", value, "logindevinfo");
+            return (Criteria) this;
+        }
+
+        public Criteria andLogindevinfoGreaterThanOrEqualTo(String value) {
+            addCriterion("logindevinfo >=", value, "logindevinfo");
+            return (Criteria) this;
+        }
+
+        public Criteria andLogindevinfoLessThan(String value) {
+            addCriterion("logindevinfo <", value, "logindevinfo");
+            return (Criteria) this;
+        }
+
+        public Criteria andLogindevinfoLessThanOrEqualTo(String value) {
+            addCriterion("logindevinfo <=", value, "logindevinfo");
+            return (Criteria) this;
+        }
+
+        public Criteria andLogindevinfoLike(String value) {
+            addCriterion("logindevinfo like", value, "logindevinfo");
+            return (Criteria) this;
+        }
+
+        public Criteria andLogindevinfoNotLike(String value) {
+            addCriterion("logindevinfo not like", value, "logindevinfo");
+            return (Criteria) this;
+        }
+
+        public Criteria andLogindevinfoIn(List<String> values) {
+            addCriterion("logindevinfo in", values, "logindevinfo");
+            return (Criteria) this;
+        }
+
+        public Criteria andLogindevinfoNotIn(List<String> values) {
+            addCriterion("logindevinfo not in", values, "logindevinfo");
+            return (Criteria) this;
+        }
+
+        public Criteria andLogindevinfoBetween(String value1, String value2) {
+            addCriterion("logindevinfo between", value1, value2, "logindevinfo");
+            return (Criteria) this;
+        }
+
+        public Criteria andLogindevinfoNotBetween(String value1, String value2) {
+            addCriterion("logindevinfo not between", value1, value2, "logindevinfo");
+            return (Criteria) this;
+        }
+
+        public Criteria andPversionIsNull() {
+            addCriterion("pversion is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andPversionIsNotNull() {
+            addCriterion("pversion is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andPversionEqualTo(String value) {
+            addCriterion("pversion =", value, "pversion");
+            return (Criteria) this;
+        }
+
+        public Criteria andPversionNotEqualTo(String value) {
+            addCriterion("pversion <>", value, "pversion");
+            return (Criteria) this;
+        }
+
+        public Criteria andPversionGreaterThan(String value) {
+            addCriterion("pversion >", value, "pversion");
+            return (Criteria) this;
+        }
+
+        public Criteria andPversionGreaterThanOrEqualTo(String value) {
+            addCriterion("pversion >=", value, "pversion");
+            return (Criteria) this;
+        }
+
+        public Criteria andPversionLessThan(String value) {
+            addCriterion("pversion <", value, "pversion");
+            return (Criteria) this;
+        }
+
+        public Criteria andPversionLessThanOrEqualTo(String value) {
+            addCriterion("pversion <=", value, "pversion");
+            return (Criteria) this;
+        }
+
+        public Criteria andPversionLike(String value) {
+            addCriterion("pversion like", value, "pversion");
+            return (Criteria) this;
+        }
+
+        public Criteria andPversionNotLike(String value) {
+            addCriterion("pversion not like", value, "pversion");
+            return (Criteria) this;
+        }
+
+        public Criteria andPversionIn(List<String> values) {
+            addCriterion("pversion in", values, "pversion");
+            return (Criteria) this;
+        }
+
+        public Criteria andPversionNotIn(List<String> values) {
+            addCriterion("pversion not in", values, "pversion");
+            return (Criteria) this;
+        }
+
+        public Criteria andPversionBetween(String value1, String value2) {
+            addCriterion("pversion between", value1, value2, "pversion");
+            return (Criteria) this;
+        }
+
+        public Criteria andPversionNotBetween(String value1, String value2) {
+            addCriterion("pversion not between", value1, value2, "pversion");
+            return (Criteria) this;
+        }
+
+        public Criteria andRegversionIsNull() {
+            addCriterion("regversion is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andRegversionIsNotNull() {
+            addCriterion("regversion is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andRegversionEqualTo(String value) {
+            addCriterion("regversion =", value, "regversion");
+            return (Criteria) this;
+        }
+
+        public Criteria andRegversionNotEqualTo(String value) {
+            addCriterion("regversion <>", value, "regversion");
+            return (Criteria) this;
+        }
+
+        public Criteria andRegversionGreaterThan(String value) {
+            addCriterion("regversion >", value, "regversion");
+            return (Criteria) this;
+        }
+
+        public Criteria andRegversionGreaterThanOrEqualTo(String value) {
+            addCriterion("regversion >=", value, "regversion");
+            return (Criteria) this;
+        }
+
+        public Criteria andRegversionLessThan(String value) {
+            addCriterion("regversion <", value, "regversion");
+            return (Criteria) this;
+        }
+
+        public Criteria andRegversionLessThanOrEqualTo(String value) {
+            addCriterion("regversion <=", value, "regversion");
+            return (Criteria) this;
+        }
+
+        public Criteria andRegversionLike(String value) {
+            addCriterion("regversion like", value, "regversion");
+            return (Criteria) this;
+        }
+
+        public Criteria andRegversionNotLike(String value) {
+            addCriterion("regversion not like", value, "regversion");
+            return (Criteria) this;
+        }
+
+        public Criteria andRegversionIn(List<String> values) {
+            addCriterion("regversion in", values, "regversion");
+            return (Criteria) this;
+        }
+
+        public Criteria andRegversionNotIn(List<String> values) {
+            addCriterion("regversion not in", values, "regversion");
+            return (Criteria) this;
+        }
+
+        public Criteria andRegversionBetween(String value1, String value2) {
+            addCriterion("regversion between", value1, value2, "regversion");
+            return (Criteria) this;
+        }
+
+        public Criteria andRegversionNotBetween(String value1, String value2) {
+            addCriterion("regversion not between", value1, value2, "regversion");
+            return (Criteria) this;
+        }
     }
 
     /**

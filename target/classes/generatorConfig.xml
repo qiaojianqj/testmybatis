@@ -38,17 +38,17 @@
         </javaClientGenerator>
 
         <!-- 数据表进行生成操作 schema:相当于库名; tableName:表名; domainObjectName:对应的DO -->
-        <table schema="jfianl_demo" tableName="role" domainObjectName="Role">
+        <table schema="jfinal_demo" tableName="role" domainObjectName="Role">
         </table>
 
+        <!--以下enable selectBy开关设为false，将不会生成example类-->
         <!--<table schema="jfianl_demo" tableName="user" domainObjectName="User"-->
-                <!--以下开关设为false，将不会生成example类-->
                <!--enableCountByExample="false" enableUpdateByExample="false"-->
                <!--enableDeleteByExample="false" enableSelectByExample="false"-->
                <!--selectByExampleQueryId="false">-->
         <!--</table>-->
 
-        <table schema="jfianl_demo" tableName="ACCOUNT" domainObjectName="Account">
+        <table schema="jfinal_demo" tableName="ACCOUNT" domainObjectName="Account">
         </table>
 
     </context>

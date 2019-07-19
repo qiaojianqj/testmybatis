@@ -126,6 +126,22 @@ public class AccountSqlProvider {
             sql.VALUES("DEVICETYPE", "#{devicetype,jdbcType=INTEGER}");
         }
         
+        if (record.getRoletime() != null) {
+            sql.VALUES("roletime", "#{roletime,jdbcType=BIGINT}");
+        }
+        
+        if (record.getLogindevinfo() != null) {
+            sql.VALUES("logindevinfo", "#{logindevinfo,jdbcType=VARCHAR}");
+        }
+        
+        if (record.getPversion() != null) {
+            sql.VALUES("pversion", "#{pversion,jdbcType=VARCHAR}");
+        }
+        
+        if (record.getRegversion() != null) {
+            sql.VALUES("regversion", "#{regversion,jdbcType=VARCHAR}");
+        }
+        
         return sql.toString();
     }
 
@@ -161,6 +177,10 @@ public class AccountSqlProvider {
         sql.SELECT("SPREADID");
         sql.SELECT("RegistTime");
         sql.SELECT("DEVICETYPE");
+        sql.SELECT("roletime");
+        sql.SELECT("logindevinfo");
+        sql.SELECT("pversion");
+        sql.SELECT("regversion");
         sql.FROM("ACCOUNT");
         applyWhere(sql, example, false);
         
@@ -264,6 +284,22 @@ public class AccountSqlProvider {
             sql.SET("DEVICETYPE = #{record.devicetype,jdbcType=INTEGER}");
         }
         
+        if (record.getRoletime() != null) {
+            sql.SET("roletime = #{record.roletime,jdbcType=BIGINT}");
+        }
+        
+        if (record.getLogindevinfo() != null) {
+            sql.SET("logindevinfo = #{record.logindevinfo,jdbcType=VARCHAR}");
+        }
+        
+        if (record.getPversion() != null) {
+            sql.SET("pversion = #{record.pversion,jdbcType=VARCHAR}");
+        }
+        
+        if (record.getRegversion() != null) {
+            sql.SET("regversion = #{record.regversion,jdbcType=VARCHAR}");
+        }
+        
         applyWhere(sql, example, true);
         return sql.toString();
     }
@@ -298,6 +334,10 @@ public class AccountSqlProvider {
         sql.SET("SPREADID = #{record.spreadid,jdbcType=INTEGER}");
         sql.SET("RegistTime = #{record.registtime,jdbcType=BIGINT}");
         sql.SET("DEVICETYPE = #{record.devicetype,jdbcType=INTEGER}");
+        sql.SET("roletime = #{record.roletime,jdbcType=BIGINT}");
+        sql.SET("logindevinfo = #{record.logindevinfo,jdbcType=VARCHAR}");
+        sql.SET("pversion = #{record.pversion,jdbcType=VARCHAR}");
+        sql.SET("regversion = #{record.regversion,jdbcType=VARCHAR}");
         
         AccountExample example = (AccountExample) parameter.get("example");
         applyWhere(sql, example, true);
@@ -388,6 +428,22 @@ public class AccountSqlProvider {
         
         if (record.getDevicetype() != null) {
             sql.SET("DEVICETYPE = #{devicetype,jdbcType=INTEGER}");
+        }
+        
+        if (record.getRoletime() != null) {
+            sql.SET("roletime = #{roletime,jdbcType=BIGINT}");
+        }
+        
+        if (record.getLogindevinfo() != null) {
+            sql.SET("logindevinfo = #{logindevinfo,jdbcType=VARCHAR}");
+        }
+        
+        if (record.getPversion() != null) {
+            sql.SET("pversion = #{pversion,jdbcType=VARCHAR}");
+        }
+        
+        if (record.getRegversion() != null) {
+            sql.SET("regversion = #{regversion,jdbcType=VARCHAR}");
         }
         
         sql.WHERE("ID = #{id,jdbcType=INTEGER}");

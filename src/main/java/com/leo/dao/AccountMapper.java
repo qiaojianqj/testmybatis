@@ -63,7 +63,9 @@ public interface AccountMapper {
         "PACKAGETYPE, COUNTTYPE, ",
         "REGIESTIP, LOGINDEVSTRING, ",
         "LOGINPACKAGEFLAG, SPREADID, ",
-        "RegistTime, DEVICETYPE)",
+        "RegistTime, DEVICETYPE, ",
+        "roletime, logindevinfo, ",
+        "pversion, regversion)",
         "values (#{id,jdbcType=INTEGER}, #{accid,jdbcType=INTEGER}, ",
         "#{username,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}, ",
         "#{createtime,jdbcType=VARCHAR}, #{bitmask,jdbcType=TINYINT}, ",
@@ -73,7 +75,9 @@ public interface AccountMapper {
         "#{packagetype,jdbcType=INTEGER}, #{counttype,jdbcType=INTEGER}, ",
         "#{regiestip,jdbcType=VARCHAR}, #{logindevstring,jdbcType=VARCHAR}, ",
         "#{loginpackageflag,jdbcType=VARCHAR}, #{spreadid,jdbcType=INTEGER}, ",
-        "#{registtime,jdbcType=BIGINT}, #{devicetype,jdbcType=INTEGER})"
+        "#{registtime,jdbcType=BIGINT}, #{devicetype,jdbcType=INTEGER}, ",
+        "#{roletime,jdbcType=BIGINT}, #{logindevinfo,jdbcType=VARCHAR}, ",
+        "#{pversion,jdbcType=VARCHAR}, #{regversion,jdbcType=VARCHAR})"
     })
     int insert(Account record);
 
@@ -113,7 +117,11 @@ public interface AccountMapper {
         @Result(column="LOGINPACKAGEFLAG", property="loginpackageflag", jdbcType=JdbcType.VARCHAR),
         @Result(column="SPREADID", property="spreadid", jdbcType=JdbcType.INTEGER),
         @Result(column="RegistTime", property="registtime", jdbcType=JdbcType.BIGINT),
-        @Result(column="DEVICETYPE", property="devicetype", jdbcType=JdbcType.INTEGER)
+        @Result(column="DEVICETYPE", property="devicetype", jdbcType=JdbcType.INTEGER),
+        @Result(column="roletime", property="roletime", jdbcType=JdbcType.BIGINT),
+        @Result(column="logindevinfo", property="logindevinfo", jdbcType=JdbcType.VARCHAR),
+        @Result(column="pversion", property="pversion", jdbcType=JdbcType.VARCHAR),
+        @Result(column="regversion", property="regversion", jdbcType=JdbcType.VARCHAR)
     })
     List<Account> selectByExample(AccountExample example);
 
@@ -127,7 +135,8 @@ public interface AccountMapper {
         "select",
         "ID, ACCID, USERNAME, PASSWORD, CREATETIME, BITMASK, FORBIDTIME, LASTLOGINTIME, ",
         "MOBILE, DEVSTRING, PACKAGEFLAG, LOGINPACKAGETYPE, PACKAGETYPE, COUNTTYPE, REGIESTIP, ",
-        "LOGINDEVSTRING, LOGINPACKAGEFLAG, SPREADID, RegistTime, DEVICETYPE",
+        "LOGINDEVSTRING, LOGINPACKAGEFLAG, SPREADID, RegistTime, DEVICETYPE, roletime, ",
+        "logindevinfo, pversion, regversion",
         "from ACCOUNT",
         "where ID = #{id,jdbcType=INTEGER}"
     })
@@ -151,7 +160,11 @@ public interface AccountMapper {
         @Result(column="LOGINPACKAGEFLAG", property="loginpackageflag", jdbcType=JdbcType.VARCHAR),
         @Result(column="SPREADID", property="spreadid", jdbcType=JdbcType.INTEGER),
         @Result(column="RegistTime", property="registtime", jdbcType=JdbcType.BIGINT),
-        @Result(column="DEVICETYPE", property="devicetype", jdbcType=JdbcType.INTEGER)
+        @Result(column="DEVICETYPE", property="devicetype", jdbcType=JdbcType.INTEGER),
+        @Result(column="roletime", property="roletime", jdbcType=JdbcType.BIGINT),
+        @Result(column="logindevinfo", property="logindevinfo", jdbcType=JdbcType.VARCHAR),
+        @Result(column="pversion", property="pversion", jdbcType=JdbcType.VARCHAR),
+        @Result(column="regversion", property="regversion", jdbcType=JdbcType.VARCHAR)
     })
     Account selectByPrimaryKey(Integer id);
 
@@ -208,7 +221,11 @@ public interface AccountMapper {
           "LOGINPACKAGEFLAG = #{loginpackageflag,jdbcType=VARCHAR},",
           "SPREADID = #{spreadid,jdbcType=INTEGER},",
           "RegistTime = #{registtime,jdbcType=BIGINT},",
-          "DEVICETYPE = #{devicetype,jdbcType=INTEGER}",
+          "DEVICETYPE = #{devicetype,jdbcType=INTEGER},",
+          "roletime = #{roletime,jdbcType=BIGINT},",
+          "logindevinfo = #{logindevinfo,jdbcType=VARCHAR},",
+          "pversion = #{pversion,jdbcType=VARCHAR},",
+          "regversion = #{regversion,jdbcType=VARCHAR}",
         "where ID = #{id,jdbcType=INTEGER}"
     })
     int updateByPrimaryKey(Account record);

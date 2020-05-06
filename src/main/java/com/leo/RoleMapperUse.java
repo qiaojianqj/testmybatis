@@ -33,20 +33,22 @@ public class RoleMapperUse {
         System.out.println ( "count: " + count );
     }
 
-    @Transactional
-    public void  throwInTransactional() {
+    //@Transactional
+    public void  throwInTransactional(long seqid) {
         Role role = new Role ();
-        //role.setSeqid ( 3L );
+        role.setSeqid ((int) seqid);
         role.setName ( "谯剑" );
         role.setNo ( "xiaoluoluo" );
         role.setType ( 2 );
         role.setRemark ( "小螺螺" );
         int count = roleMapper.insertSelective ( role );
         System.out.println ( "count: " + count );
+
+
         //加了Transactional注解，碰到异常会回滚数据库事务
         //没加注解，碰到异常也插入成功
-        if (true) {
-            throw  new RuntimeException ( "故意抛出异常" );
-        }
+        //if (true) {
+        //    throw  new RuntimeException ( "故意抛出异常" );
+        //}
     }
 }
